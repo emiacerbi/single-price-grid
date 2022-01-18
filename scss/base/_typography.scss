@@ -1,0 +1,89 @@
+body {
+    font-family: var(--ff);
+}
+
+.container {
+    .header {
+        &__title {
+            color: var(--cyan);
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        &__subtitle {
+            color: var(--bright-yellow);
+            font-weight: 700;
+        }
+
+        &__text {
+            color: var(--grayish-blue);
+            font-weight: 700;
+            font-size: .8rem;
+            line-height: 1.8;
+            opacity: .7;
+        }
+    }
+
+    .pricing {
+        color: var(--light-gray);
+
+        &__title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            opacity: .9;
+        }
+
+        &__price {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .accent {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: .5;
+        }
+
+        &__text {
+            opacity: .9;
+        }
+
+        &__btn {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            opacity: .9;
+            font-weight: 700;
+        }
+    }
+
+    .footer {
+        color: var(--light-gray);
+        &__title {
+            font-size: 1.4rem;
+            opacity: .9;
+        }
+
+        &__text {
+            opacity: .6;
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .container {
+        .header {
+            &__title {
+                font-size: 2rem;
+            }
+    
+            &__subtitle {
+                font-size: 1.5rem;
+            }
+    
+            &__text {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

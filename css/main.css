@@ -1,0 +1,233 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --contrast: #b1c655;
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --ff: "Karla", sans-serif;
+}
+
+body {
+  font-family: var(--ff);
+}
+
+.container .header__title {
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.container .header__subtitle {
+  color: var(--bright-yellow);
+  font-weight: 700;
+}
+.container .header__text {
+  color: var(--grayish-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+.container .pricing {
+  color: var(--light-gray);
+}
+.container .pricing__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.container .pricing__price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.container .pricing .accent {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.5;
+}
+.container .pricing__text {
+  opacity: 0.9;
+}
+.container .pricing__btn {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0.9;
+  font-weight: 700;
+}
+.container .footer {
+  color: var(--light-gray);
+}
+.container .footer__title {
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+.container .footer__text {
+  opacity: 0.6;
+}
+
+@media (min-width: 650px) {
+  .container .header__title {
+    font-size: 2rem;
+  }
+  .container .header__subtitle {
+    font-size: 1.5rem;
+  }
+  .container .header__text {
+    font-size: 1.2rem;
+  }
+}
+body {
+  background-color: var(--light-gray);
+  padding: 0 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.container .header {
+  background-color: white;
+  padding: 1.5em;
+}
+.container .header__subtitle {
+  margin-top: 1em;
+}
+.container .header__text {
+  margin-top: 1em;
+}
+.container .pricing {
+  background-color: var(--cyan);
+  padding: 1.5em;
+}
+.container .pricing__price {
+  display: flex;
+  align-items: center;
+}
+.container .pricing .accent {
+  margin-left: 0.8em;
+}
+.container .pricing__btn {
+  margin-top: 1.5em;
+  background-color: var(--bright-yellow);
+  display: block;
+  padding: 0.8em 0;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.container .pricing__btn:hover, .container .pricing__btn:focus {
+  opacity: 0.8;
+  background-color: var(--contrast);
+}
+.container .footer {
+  background-color: #4abebd;
+  padding: 1.5em;
+}
+.container .footer__text {
+  margin-top: 1em;
+}
+
+@media (min-width: 500px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "pricing footer";
+  }
+  .container .header {
+    grid-area: header;
+    padding: 3em;
+  }
+  .container .pricing {
+    grid-area: pricing;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .pricing__btn {
+    margin-top: auto;
+  }
+  .container .footer {
+    grid-area: footer;
+    padding: 3em;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
